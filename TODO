@@ -1,0 +1,4 @@
+ - Improve fallback to support more than just .ico
+ - Implement Braveicon as a class.  Don't know why I didn't, except that it's late, and I'm lazy. 
+ - try 'https' links - not sure when, I'm thinking after final /favicon fallback.
+ - add all the returns to an array instead of stopping on the first (as an option)

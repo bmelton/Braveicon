@@ -1,0 +1,44 @@
+Braveicon
+----------------------------
+by Barry Melton on 9/13/2010
+barry.melton@gmail.com
+sympodial.com
+---------------------------
+
+Braveicon is a simple tool used to get the favicon url from a webpage. 
+
+I developed it for plum, when I realized that there weren't any other
+particularly viable tools out there to do it with in Python. 
+
+Braveicon requires BeautifulSoup, and works on python2.6. 
+
+To use Braveicon in your project, just do the following:
+
+` import braveicon
+` braveicon.get_favicon(url)
+
+Braveicon will accept most urls -- I provide mine in shorthand (e.g., 
+"sympodial.com" vs "http://sympodial.com", but it will do its best
+to figure that out for you, and should accept pretty much anything
+normal. 
+
+Braveicon will try to find favicons using the W3C "link rel='icon'" 
+attributes in the head first (gotta respect the spec), followed by
+"link rel='shortcut icon'" links, and will fall back to /favicon.ico 
+links if all those fail. 
+
+
+
+Similar Projects
+--------------------------------------------------------------------
+Similar projects (that didn't work for me, YMMV):
+ - http://blog.naqu.in/post/45591808/grabbing-a-sites-favicon
+   Devin Naquin's approach uses sgmllib 
+
+ - http://www.getfavicon.org/results.php?url=python.org
+   Software as a service that I would have used, except that they're
+     actually rendering an image as a file, and every request goes
+     through their service.  
+
+ - http://code.activestate.com/recipes/577114-downloading-websites-favicon/
+   ActiveState's approach uses urllib and lxml.html.  
